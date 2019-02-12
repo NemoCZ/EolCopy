@@ -40,7 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data Processing\DataProcessor.cs" />
     <Compile Include="Data Processing\Pozice.cs" />
+    <Compile Include="Data Processing\Typ.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
