@@ -1,0 +1,9 @@
+C:\Users\serap\source\repos\EolCopy\EolCopy\bin\Debug\EolCopy.exe
+C:\Users\serap\source\repos\EolCopy\EolCopy\bin\Debug\EolCopy.pdb
+C:\Users\serap\source\repos\EolCopy\EolCopy\obj\Debug\EolCopy.csprojAssemblyReference.cache
+C:\Users\serap\source\repos\EolCopy\EolCopy\obj\Debug\EolCopy.Form1.resources
+C:\Users\serap\source\repos\EolCopy\EolCopy\obj\Debug\EolCopy.Properties.Resources.resources
+C:\Users\serap\source\repos\EolCopy\EolCopy\obj\Debug\EolCopy.csproj.GenerateResource.cache
+C:\Users\serap\source\repos\EolCopy\EolCopy\obj\Debug\EolCopy.csproj.CoreCompileInputs.cache
+C:\Users\serap\source\repos\EolCopy\EolCopy\obj\Debug\EolCopy.exe
+C:\Users\serap\source\repos\EolCopy\EolCopy\obj\Debug\EolCopy.pdb
