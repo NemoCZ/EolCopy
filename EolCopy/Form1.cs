@@ -37,9 +37,7 @@ namespace EolCopy
                         {
                             dt.Columns.Add(sloupec+i++);
                         }
-                        // test
-                        //test refactored
-                        //neco neco
+                        
                     }
                     radky.Add(sr.ReadLine().Split(';'));
 
