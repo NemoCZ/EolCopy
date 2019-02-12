@@ -38,6 +38,7 @@ namespace EolCopy
                             dt.Columns.Add(sloupec+i++);
                         }
                         // test
+                        //test refactored
                     }
                     radky.Add(sr.ReadLine().Split(';'));
 
