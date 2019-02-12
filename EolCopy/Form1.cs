@@ -39,6 +39,7 @@ namespace EolCopy
                         }
                         // test
                         //test refactored
+                        //neco neco
                     }
                     radky.Add(sr.ReadLine().Split(';'));
 
