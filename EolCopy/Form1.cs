@@ -6,6 +6,7 @@ using System.Drawing;
 using System.IO;
 using System.Text;
 using System.Windows.Forms;
+using EolCopy.Data_Processing;
 
 namespace EolCopy
 {
@@ -48,7 +49,8 @@ namespace EolCopy
                 {
                     dt.Rows.Add(item);
                 }
-                dataGridView1.DataSource = dt;
+                Typ test = new Typ(openFileDialog1.FileName);
+                dataGridView1.DataSource = test.Data;
                 
             }
             

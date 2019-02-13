@@ -7,12 +7,14 @@ namespace EolCopy.Data_Processing
 {
     class Typ
     {
-        public int CisloTypu { get; }
+        private int cislo;
+        public int CisloTypu => cislo;
         public string[] popisky { get; }
         public List<Pozice> Data { get; }
 
         public Typ(string cesta)
         {
+            cislo = 0;
             Data = new List<Pozice>();
             NactiDataZeSouboru(cesta);
         }
@@ -22,7 +24,7 @@ namespace EolCopy.Data_Processing
             StreamReader sr = new StreamReader(cesta);
             bool prvniRadek = true;
             string[] popisky = null;
-            int i = 1;
+            int i = 0;
             while (sr.Peek() >= 0)
             {
                 if (prvniRadek)
@@ -30,8 +32,20 @@ namespace EolCopy.Data_Processing
                     string prvni = sr.ReadLine();
                     popisky = prvni.Split(';');
                 }
-                string[] dataRadku = sr.ReadLine().Split(';');
-                Data.Add(new Pozice(popisky[i++],int.Parse(dataRadku[0]),dataRadku)); 
+                string popisek = "";
+                if (i<popisky.Length)
+                {
+                    popisek = popisky[i++];
+                }
+                string radek = sr.ReadLine();
+                string[] dataRadku = radek.Split(';');
+                int id = 0;
+                if (int.TryParse(dataRadku[0],out id))
+                {
+                    cislo = id;
+                }
+                
+                Data.Add(new Pozice(popisek,id,dataRadku)); 
 
                 prvniRadek = false;
 
