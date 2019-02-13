@@ -10,12 +10,19 @@ namespace EolCopy.Data_Processing
     {
         
         private DataTable datovaTabulka;
+        private List<Typ> tabulkaTypu;
 
-        public DataProcessor(string cesta)
+        public DataProcessor(string cesta) // cesta je cesta ke složce
         {
             datovaTabulka = new DataTable();
+            tabulkaTypu = new List<Typ>();
             
 
+        }
+
+        public void PridejTyp(Typ typ)
+        {
+            tabulkaTypu.Add(typ);
         }
 
         
