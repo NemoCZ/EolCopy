@@ -18,29 +18,6 @@ namespace EolCopy.Data_Processing
 
         }
 
-        public Typ NactiDataZeSouboru(string cesta)
-        {
-            Typ typ = new Typ(1); //todo: cislo typu nacitat z nazvu souboru
-            StreamReader sr = new StreamReader(cesta);
-            bool prvniRadek = true;
-            string[] popisky;
-            List<string[]> radky = new List<string[]>();
-            while (sr.Peek() >= 0)
-            {
-                if (prvniRadek)
-                {
-                    string prvni = sr.ReadLine();
-                    popisky = prvni.Split(';');
-                }
-
-                radky.Add(sr.ReadLine().Split(';')); //jednotlive pozice jsou ve formě pole stringů, mimochodem je důležité přečíst všechno jinak tento while nikdy
-                // nedoběhne
-
-                prvniRadek = false;
-
-            }
-            
-            return null;
-        }
+        
     }
 }

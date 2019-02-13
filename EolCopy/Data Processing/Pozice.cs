@@ -9,12 +9,22 @@ namespace EolCopy.Data_Processing
         public string Name { get; set; }
         public int Id { get; }
         public int[] Data { get; set; }
+        private const int pocatekDat = 4;
 
-        public Pozice(string name,int id,int[] data)
+        public Pozice(string name,int id,string[] data)
         {
             Name = name;
             Id = id;
-            Data = data;
+            List<int> ciselnySeznam = new List<int>();
+            for (int i = pocatekDat; i < data.Length; i++)
+            {
+                int n = 0;
+                if (int.TryParse(data[i],out n))
+                {
+                    ciselnySeznam.Add(n);
+                }
+            }
+            Data = ciselnySeznam.ToArray();
         }
 
     }
