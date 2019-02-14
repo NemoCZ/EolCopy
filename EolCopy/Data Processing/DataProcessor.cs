@@ -11,12 +11,13 @@ namespace EolCopy.Data_Processing
         
         private DataTable datovaTabulka;
         private List<Typ> tabulkaTypu;
+        private FileInfo[] soubory;
 
         public DataProcessor(string cesta) // cesta je cesta ke složce
         {
             datovaTabulka = new DataTable();
             tabulkaTypu = new List<Typ>();
-            
+            soubory = NactiSoubory(cesta);
 
         }
 
@@ -25,6 +26,18 @@ namespace EolCopy.Data_Processing
             tabulkaTypu.Add(typ);
         }
 
-        
+        private FileInfo[] NactiSoubory(string cesta)
+        {
+            DirectoryInfo dirInfo = new DirectoryInfo(cesta);
+            return dirInfo.GetFiles();
+        }
+
+        public void NactiTypy()
+        {
+            foreach (FileInfo soubor in soubory)
+            {
+                tabulkaTypu.Add(new Typ(soubor.FullName));
+            }
+        }
     }
 }
