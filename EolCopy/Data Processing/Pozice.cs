@@ -26,7 +26,7 @@ namespace EolCopy.Data_Processing
             }
             Data = ciselnySeznam.ToArray();
         }
-		
+		//pomocná metoda na převod pole stringu na pole intu
 		private int[] StrArrToIntArr(string[] data)
 		{
 			List<int> ciselnySeznam = new List<int>();
