@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace EolCopy.Data_Processing
 {
@@ -12,9 +13,24 @@ namespace EolCopy.Data_Processing
         public string[] popisky { get; }
         public List<Pozice> Data { get; }
 
+
         public Typ(string cesta)
         {
             cislo = 0;
+
+
+            //**** vytažení čísla typu z názvu souboru
+            Regex rg = new Regex(@"_(?<typ>[0-9]+)\.csv");
+            Match mch = rg.Match(cesta);
+            
+            if (mch.Success)
+            {
+                cislo = int.Parse(mch.Groups["typ"].Value);
+            }
+            //    \d+\b   regex na cislo typu
+            //***************************************
+
+
             Data = new List<Pozice>();
             NactiDataZeSouboru(cesta);
         }
