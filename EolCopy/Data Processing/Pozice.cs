@@ -26,6 +26,21 @@ namespace EolCopy.Data_Processing
             }
             Data = ciselnySeznam.ToArray();
         }
+		
+		private int[] StrArrToIntArr(string[] data)
+		{
+			List<int> ciselnySeznam = new List<int>();
+            for (int i = pocatekDat; i < data.Length; i++)
+            {
+                int n = 0;
+                if (int.TryParse(data[i],out n))
+                {
+                    ciselnySeznam.Add(n);
+                }
+            }
+            return  ciselnySeznam.ToArray();
+        }
+		}
 
     }
 }
