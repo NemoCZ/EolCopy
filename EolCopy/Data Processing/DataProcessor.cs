@@ -18,6 +18,7 @@ namespace EolCopy.Data_Processing
             datovaTabulka = new DataTable();
             tabulkaTypu = new List<Typ>();
             soubory = NactiSoubory(cesta);
+            //neco neco
 
         }
 
