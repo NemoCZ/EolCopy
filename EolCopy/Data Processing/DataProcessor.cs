@@ -32,7 +32,7 @@ namespace EolCopy.Data_Processing
             DirectoryInfo dirInfo = new DirectoryInfo(cesta);
             return dirInfo.GetFiles();
         }
-
+        // neco nactu
         public void NactiTypy()
         {
             foreach (FileInfo soubor in soubory)
