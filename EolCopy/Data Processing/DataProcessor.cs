@@ -40,7 +40,7 @@ namespace EolCopy.Data_Processing
                 tabulkaTypu.Add(new Typ(soubor.FullName));
             }
         }
-        
+        //nacteme toho vic
         public void NactiTypy(string cesta)
         {
             NactiSoubory(cesta);
