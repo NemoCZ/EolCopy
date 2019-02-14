@@ -39,5 +39,13 @@ namespace EolCopy.Data_Processing
                 tabulkaTypu.Add(new Typ(soubor.FullName));
             }
         }
+        
+        public void NactiTypy(string cesta)
+        {
+            NactiSoubory(cesta);
+            NactiTypy();
+        }
+
+
     }
 }
