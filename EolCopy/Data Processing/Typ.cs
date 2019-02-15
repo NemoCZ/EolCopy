@@ -27,7 +27,7 @@ namespace EolCopy.Data_Processing
             {
                 cislo = int.Parse(mch.Groups["typ"].Value);
             }
-            //    \d+\b   regex na cislo typu
+            //    _(?<typ>[0-9]+)\.csv   regex na cislo typu
             //***************************************
 
 
@@ -58,7 +58,7 @@ namespace EolCopy.Data_Processing
                 int id = 0;
                 if (int.TryParse(dataRadku[0],out id))
                 {
-                    cislo = id;
+                   
                 }
                 
                 Data.Add(new Pozice(popisek,id,dataRadku)); 

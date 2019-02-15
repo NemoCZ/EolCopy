@@ -56,5 +56,17 @@ namespace EolCopy
             
             
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            DataProcessor proc;
+            if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
+            {
+                string cesta = folderBrowserDialog1.SelectedPath;
+                proc = new DataProcessor(cesta);
+                
+            }
+
+        }
     }
 }
